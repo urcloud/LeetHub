@@ -119,13 +119,13 @@ function constructGitHubPath(
       const path = useDifficultyFolder
         ? `${language}/${difficulty}/${filePath}`
         : `${language}/${filePath}`;
-      return `https://api.github.com/repos/${hook}/contents/${path}`;
+      return `https://api.github.com/repos/${hook}/contents/LeetCode/${difficulty}/${path}`;
     }
   }
   const path = useDifficultyFolder
     ? `${basePath}/${difficulty}/${filePath}`
     : `${filePath}`;
-  return `https://api.github.com/repos/${hook}/contents/${path}`;
+  return `https://api.github.com/repos/${hook}/contents/LeetCode/${difficulty}/${path}`;
 }
 
 const parseCustomCommitMessage = (text, problemContext) => {
